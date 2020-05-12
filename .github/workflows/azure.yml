@@ -14,10 +14,6 @@ on:
   push:
     branches:
       - master
-
-env:
-  AZURE_WEBAPP_NAME: lifeonland    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
 jobs:
   build-and-deploy:
     name: Build and Deploy
@@ -29,4 +25,4 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - run: |
-        az webapp up --location southindia --name lifeonland --html
+        az webapp up --location southindia --name ak-test-python --html

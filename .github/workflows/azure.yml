@@ -12,4 +12,4 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - run: |
-        az webapp up --name ak-static-web-app --html
+        az webapp up --location westeurope --name ak-static-web-app --html
